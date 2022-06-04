@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
 //import { useFonts } from 'expo-font';
 import {useFonts, Montserrat_700Bold, Montserrat_400Regular} from '@expo-google-fonts/montserrat';
 import channels from './data.js';
@@ -79,10 +79,10 @@ export default function App() {
 
       <View style={{height:180, backgroundColor:"#121212", top:25, marginLeft:20, marginRight:20}}>
 
-        <View style={{width:175, height:55, backgroundColor:"#2f2f2f", borderRadius:4.5, position:'absolute', justifyContent:'center'}}>
+        <TouchableOpacity onPress={() => console.log('Pressed !')} style={{width:175, height:55, backgroundColor:"#2f2f2f", borderRadius:4.5, position:'absolute', justifyContent:'center'}}>
           <Image style={{zIndex:2, height:55, width:55, position:'absolute', left:0, borderRadius:4.5}} source={{uri:"http://media.culturepsg.com/image/news/podcast_culturepsg.jpg"}}></Image>
           <Text style={{color:"#ffffff", fontFamily:'Montserrat_700Bold', fontSize:12, left:65, width:100}}>Podcast de CulturePSG</Text>
-        </View>
+        </TouchableOpacity>
 
         <View style={{width:175, height:55, backgroundColor:"#2f2f2f", borderRadius:4.5, position:'absolute', left:180, justifyContent:'center'}}>
           <Image style={{zIndex:2, height:55, width:55, position:'absolute', left:0, borderRadius:4.5}} source={{uri:"http://media.culturepsg.com/image/news/podcast_culturepsg.jpg"}}></Image>
